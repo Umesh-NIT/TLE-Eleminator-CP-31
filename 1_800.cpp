@@ -1,9 +1,9 @@
 #include<bits/stdc++.h>
 using namespace std;
 bool solve(vector<int> a, int n, int k){
-    sort(a.begin(), a.end());
-    for(int i=0; i<n-1; i++){
-        if(a[i+1]-a[i]>k){
+    if(k >= 2)return true;
+    for(int i=1; i<n; i++){
+        if(a[i]<a[i-1]){
             return false;
         }
     }
