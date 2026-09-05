@@ -2,6 +2,7 @@
 using namespace std;
 bool solve(vector<int> a, int n, int k){
     if(k >= 2)return true;
+
     for(int i=1; i<n; i++){
         if(a[i]<a[i-1]){
             return false;
